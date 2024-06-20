@@ -4,7 +4,7 @@ import Text from "@/components/homepage/Text";
 
 const Home = () => {
   return (
-    <div className="min-h-screen text-white bg-black flex flex-col justify-evenly items-center font-mono gap-y-4">
+    <div className="min-h-screen text-white bg-[#070709] flex flex-col justify-evenly items-center font-mono gap-y-4">
       <div>
         <Logo />
       </div>

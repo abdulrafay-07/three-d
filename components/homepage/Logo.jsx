@@ -6,15 +6,14 @@ import gsap from "gsap";
 const Logo = () => {
 
     useGSAP(() => {
-        gsap.from("#logo", {
-            y: -30,
-            duration: 0.8,
-            opacity: 0.2,
-        })
-    }, [])
+        gsap.fromTo("#logo",
+            { y: -30, duration: 0.8, opacity: 0, },
+            { y: 0, duration: 0.8, opacity: 1 }
+        )
+    }, []);
 
     return (
-        <h1 id="logo" className="text-[1.7rem] leading-none font-bold text-gray-400">
+        <h1 id="logo" className="opacity-0 text-[1.7rem] leading-none font-bold text-gray-400 cursor-pointer">
             BLUE<br />YARD
         </h1>
     )
