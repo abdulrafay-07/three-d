@@ -1,3 +1,5 @@
+import Text from "@/componenets/homepage/Text";
+
 const Home = () => {
   return (
     <div className="min-h-screen text-white bg-black flex flex-col justify-evenly items-center font-mono">
@@ -8,7 +10,7 @@ const Home = () => {
         Spinner
       </div>
       <div>
-        Text
+        <Text/>
       </div>
     </div>
   )
