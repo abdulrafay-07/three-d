@@ -1,5 +1,6 @@
 import Logo from "@/components/homepage/Logo";
 import Spinner from "@/components/homepage/Spinner";
+import Text from "@/componenets/homepage/Text";
 
 const Home = () => {
   return (
@@ -11,7 +12,7 @@ const Home = () => {
         <Spinner />
       </div>
       <div>
-        Text
+        <Text/>
       </div>
     </div>
   )
