@@ -1,6 +1,6 @@
 import Logo from "@/components/homepage/Logo";
 import Spinner from "@/components/homepage/Spinner";
-import Text from "@/componenets/homepage/Text";
+import Text from "@/components/homepage/Text";
 
 const Home = () => {
   return (
