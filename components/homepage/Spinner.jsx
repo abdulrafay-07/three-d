@@ -39,7 +39,7 @@ const Spinner = ({ handleClick }) => {
         gsap.to({ progress: 0 }, {
             progress: 100,
             delay: 0.5,
-            duration: 0.5,
+            duration: 2.5,
             onUpdate: function() {
                 updateProgress(this.targets()[0].progress);
             }

@@ -35,13 +35,13 @@ const Home = () => {
         <Logo />
       </div>
       <div>
-        <Canvas dpr={[1, 2]} shadows camera={{ fov: 110, position: [1, 2, 1] }}>
-          <OrbitControls enableZoom={false} enablePan={false} />
+        <Canvas dpr={[1, 2]} shadows camera={{ fov: 110, position: [-0.5, 3, 1.5] }}>
+          {/* <OrbitControls enableZoom={false} enablePan={false} /> */}
           <ambientLight intensity={4} />
           <directionalLight position={[2, 1, 1]} />
 
           <Suspense fallback={null}>
-            <Galaxy />
+            <Galaxy></Galaxy>
             <Environment preset="city" />
           </Suspense>
         </Canvas>
