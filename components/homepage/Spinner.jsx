@@ -45,28 +45,34 @@ const Spinner = () => {
             }
         }).then(() => {
             setIsLoading(false);
-        });
+        })
     }, []);
 
     return (
         <div 
             id="spinner"
-            className="scale-[0.8] opacity-0"
+            className="scale-[0.8] opacity-0 h-64 grid place-items-center"
             onMouseEnter={!isLoading ? handleMouseEnter : null}
             onMouseLeave={!isLoading ? handleMouseLeave : null}
         >
             <div
-                className={`p-[2px] border-[1.5px] border-blue-400 border-opacity-35 rounded-[50%] ${!isLoading ? "hover:border-blue-800 transition duration-700" : ""} text-gray-400`}
+                className={`border-[1.5px] border-blue-400 border-opacity-35 rounded-[50%] transition-all duration-1000 ${!isLoading ? "hover:border-blue-700 hover:border-opacity-75 p-[2px]" : "p-0"} text-gray-400`}
             >
                 <div
-                    className={`p-[2px] border-[1.5px] border-blue-400 border-opacity-35 rounded-[50%] ${!isLoading ? "hover:border-blue-800 transition duration-700" : ""}`}
+                    className={`border-[1.5px] border-blue-400 border-opacity-35 rounded-[50%] transition-all duration-1000 ${!isLoading ? "hover:border-blue-700 hover:border-opacity-65 p-[2px]" : "p-0"} text-gray-400`}
                 >
-                    <button
-                        className={`px-20 ${isLoading ? "py-20" : "py-[5.5rem] hover:border-blue-700 transition duration-700"} border-[1.5px] border-blue-300 border-opacity-35 rounded-[50%]`}
-                        disabled={isLoading}
+                    <div
+                        className={`p-1 border-[1.5px] border-blue-400 border-opacity-35 rounded-[50%] ${!isLoading ? "hover:border-blue-600 duration-1000 hover:border-opacity-55" : ""}`}
                     >
-                        {`${isLoading ? progress + "%" : "BEGIN"}`}
-                    </button>
+                        <button
+                            className={`px-16 ${isLoading ? "py-[4.75rem]" : "py-[4.75rem] "} `}
+                            disabled={isLoading}
+                        >
+                            <p className="text-sm w-12 h-4 grid place-items-center">
+                                {`${isLoading ? progress + "%" : "BEGIN"}`}
+                            </p>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

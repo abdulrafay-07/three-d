@@ -13,7 +13,7 @@ const Text = () => {
     }, [])
     return (
         <div>
-            <p id='text' className='text-gray-400'>Welcome to Blue Yard</p>
+            <p id='text' className='text-gray-500 opacity-40 text-md'>WELCOME TO BLUE YARD</p>
         </div>
     )
 }
