@@ -9,6 +9,7 @@ import { Environment, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 
 import Galaxy from "@/components/models/Galaxy";
+import Explore from "@/components/homepage/Explore";
 
 const Home = () => {
   const [model, setModel] = useState(false);
@@ -45,6 +46,10 @@ const Home = () => {
             <Environment preset="city" />
           </Suspense>
         </Canvas>
+        <div className="absolute top-[200px] text-white">
+        <Explore/>
+
+        </div>
       </div>
     </div>
   )
