@@ -4,7 +4,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useEffect, useState } from "react";
 
-const Spinner = () => {
+const Spinner = ({ handleClick }) => {
     const [progress, setProgress] = useState(0);
     const [isLoading, setIsLoading] = useState(true);
 
@@ -39,7 +39,7 @@ const Spinner = () => {
         gsap.to({ progress: 0 }, {
             progress: 100,
             delay: 0.5,
-            duration: 3.5,
+            duration: 0.5,
             onUpdate: function() {
                 updateProgress(this.targets()[0].progress);
             }
@@ -51,7 +51,7 @@ const Spinner = () => {
     return (
         <div 
             id="spinner"
-            className="scale-[0.8] opacity-0 h-64 grid place-items-center"
+            className="scale-[0.8] opacity-0 h-64 grid place-items-center py-20"
             onMouseEnter={!isLoading ? handleMouseEnter : null}
             onMouseLeave={!isLoading ? handleMouseLeave : null}
         >
@@ -67,6 +67,7 @@ const Spinner = () => {
                         <button
                             className={`px-16 ${isLoading ? "py-[4.75rem]" : "py-[4.75rem] "} `}
                             disabled={isLoading}
+                            onClick={handleClick}
                         >
                             <p className="text-sm w-12 h-4 grid place-items-center">
                                 {`${isLoading ? progress + "%" : "BEGIN"}`}
@@ -76,7 +77,7 @@ const Spinner = () => {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default Spinner;

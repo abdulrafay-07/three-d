@@ -15,7 +15,7 @@ const Text = () => {
         <div>
             <p id='text' className='text-gray-500 opacity-40 text-md'>WELCOME TO BLUE YARD</p>
         </div>
-    )
+    );
 }
 
 export default Text
